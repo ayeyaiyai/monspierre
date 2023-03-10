@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Condensed&display=swap');
+
+*{
+  font-family: 'Gloock', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Styling for the welcome page */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(images/homepage-background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.welcome {
+  width: 70%;
+  min-width: 500px;
+  text-align: center;
+  color: rgb(3, 0, 41);
+  background-color: rgb(0, 149, 207, 0);
+  padding: 0px 24px 0px 24px;
+  border-radius: 8px;
+  animation: drop 1.5s;
+}
+
+@keyframes drop {
+  0% {transform: translateY(-100px) scaleY(1); opacity: 0;}
+  100% {transform: translateY(0px) scaleY(1); opacity: 1;}
+}
+
+.welcome-title {
+  font-size: 7em;
+  font-weight: 700;
+  margin: 12px 12px 0px 12px;
+}
+
+.welcome-message {
+  margin-bottom: 48px;
+  font-size: 1.3em;
+  font-style: italic;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.welcome-button {
+  font-size: 1.6em;
+  padding: 10px 32px 10px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(3, 0, 41);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.welcome-button:hover {
+  background-color: rgb(5, 0, 94)
+}
+
+
+/* Styling for the main shop page */
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-width: 800px;
+  min-height: 128px;
+  background-color:rgb(3, 0, 41);
+}
+
+.shop-header-title {
+  font-size: 3.6em;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.shop-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4em;
+  margin: 0px 12px 0px 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header-link:hover,
+.cart-icon:hover,
+.delete-cart-item:hover {
+  transform: scale(1.1);
+  transition: transform .2s ease-in-out;
+}
+
+.cart-icon,
+.items-in-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.cart-icon {
+  font-size: 20px;
+  height: 52px;
+  width: 52px;
+  background-color: white;
+  margin-left: 48px;
+  cursor: pointer;
+}
+
+.items-in-cart {
+  height: 28px;
+  width: 28px;
+  background-color: rgb(77, 120, 212);
+  color: white;
+  transform: translateY(-20px) translateX(-14px);
+  font-weight: 700;
+  opacity: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.shop-body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 245, 245);
+  padding: 48px;
+  min-width: 600px;
+}
+
+.shop-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 48px;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-width: 200px;
+  width: 23%;
+  border-radius: 12px;
+  border: 1px solid rgb(194, 194, 194);
+  padding: 16px;
+  color:rgb(3, 0, 41);
+}
+
+.shop-item img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 2px;
+  font-style: italic;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.product-price {
+  font-size: 1.25em;
+  margin-bottom: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.add-to-cart {
+  width: 100%;
+  height: 42px;
+  background-color: rgb(3, 0, 41);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: .9em;
+  cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.add-to-cart:hover,
+.checkout:hover {
+  background-color:rgb(5, 0, 94);
+}
+
+
+/* Sidebar styling */
+
+.sidebar {
+  height: 100%;
+  width: 0px;
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  padding-top: 24px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 0%;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+
+.cart-title {
+  font-size: 3em;
+  letter-spacing: 2px;
+  color:rgb(3, 0, 41);
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 20px;
+}
+
+.cart-products {
+  display: flex;
+  flex-direction: column;
+  max-height: 60%;
+  overflow-y: scroll;
+  margin-bottom: 24px;
+}
+
+.cart-item {
+  display: flex;
+  position: relative;
+}
+
+.cart-item-image {
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 12px;
+}
+
+.cart-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-product-name {
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: italic;
+}
+
+.cart-product-price {
+  font-size: 1.2em;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.delete-cart-item {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  color:rgb(3, 0, 41);
+  top: 4px;
+  right: 4px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.cart-total {
+  display: flex;
+  font-size: 1.8em;
+}
+
+.cart-total-title {
+  margin-right: 8px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.cart-total-price {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.checkout {
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 40px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(3, 0, 41);
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  bottom: 48px;
+  min-width: 150px;
+  position: absolute;
+}
