@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+  <title>Monspierre</title>
+</head>
+<body>
+  <div class="shop-container">
+    <div class="shop-header">
+      <div class="shop-header-title shop-header-left">Monspierre</div>
+      <div class="shop-header-right">
+        <a href="../index.html" class="header-link">Home</a>
+        <a href="./shop.html" class="header-link">Shop</a>
+        <div class="cart-icon" onclick="openCart()">&#128722;</div>
+        <div class="items-in-cart" id="items-cart"></div>
+      </div>
+    </div>
+    <div class="shop-body">
+      
+      <div class="shop-row">
+        <div class="shop-item" id="item-one">
+          <img src="../images/jeans-one.png" alt="Lightwash jeans product photo" class="product-photo">
+          <div class="product-title">Lightwash Raw Denim</div>
+          <div class="product-price">$119.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="shop-item">
+          <img src="../images/jeans-two.png" alt="Black jeans product photo" class="product-photo">
+          <div class="product-title">Black Raw Denim</div>
+          <div class="product-price">$139.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="shop-item">
+          <img src="../images/jeans-three.png" alt="Indigo jeans product photo" class="product-photo">
+          <div class="product-title">Indigo Raw Denim</div>
+          <div class="product-price">$119.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </div>
+
+      <div class="shop-row">
+        <div class="shop-item">
+          <img src="../images/jeans-four.png" alt="Slim taper jeans product photo" class="product-photo">
+          <div class="product-title">Slim Taper Indigo</div>
+          <div class="product-price">$129.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="shop-item">
+          <img src="../images/jeans-five.png" alt="Chino charcoal product photo" class="product-photo">
+          <div class="product-title">Slim Chino Charcoal</div>
+          <div class="product-price">$99.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="shop-item">
+          <img src="../images/jeans-six.png" alt="Khaki chino product photo" class="product-photo">
+          <div class="product-title">Slim Chino Khaki</div>
+          <div class="product-price">$99.99</div>
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="mySidebar">
+      <div class="cart-title">Cart</div>
+      <div class="cart-products">
+      </div>
+      <div class="cart-total">
+        <div class="cart-total-title">Total: </div>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="checkout">Checkout</button>
+    </div>
+
+    <div id="overlay" onclick="closeCart()"></div>
+  </div>
+</body>
+</html>
